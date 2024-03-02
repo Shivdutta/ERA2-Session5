@@ -14,8 +14,8 @@ This document serves as the readme file for the PyTorch Assignment of Session 5.
 
 ## File Structure
 
-- `model.py` : This file encompasses the PyTorch model implementation and functions for training the model and obtaining its summary.
-- `utils.py` : This script contains utility functions, including data loading and visualization functionalities.
+- `model.py` : This file encompasses the PyTorch model for defining the convolution network.
+- `utils.py` : This script contains utility functions for training, validation and prediction count functionalities.
 - `S5.ipynb` : This Jupyter notebook serves as the central place for executing the machine learning task, utilizing both the model and utility functions..
 - `README.md`: The README file you're currently reading. It offers a comprehensive explanation of the assignment and the provided code.
 
@@ -25,15 +25,18 @@ In this assignment, the MNIST dataset is employed. It comprises images depicting
 
 ### Sample Images
 
-The getSampleImages function located in utils.py is employed to showcase a selection of sample images extracted from the training dataset. This aids in visualizing the nature of the images that the model is being trained on. The displayed images are in grayscale and depict handwritten digits ranging from 0 to 9.
+The Conv Block 6 in S5.ipynb is used to showcase a selection of sample images extracted from the training dataset. This aids in visualizing the nature of the images that the model is being trained on. The displayed images are in grayscale and depict handwritten digits ranging from 0 to 9.
+
+![MINIST](images/mnist.png)
+
 
 ## Understanding the Code
 
 The codebase is structured across multiple files to enhance organization and readability:
 
-- `model.py` : This file commences with defining the PyTorch model, termed Net, which is a convolutional neural network constructed utilizing PyTorch's nn.Module. Subsequently, it houses various functions for model training, summarization, and visualization of training and test plots.
+- `model.py` : - This file contains the definition of a neural network model architecture. It includes the implementation of the `Net` class, which defines the structure of the neural network.
 
-- `utils.py` : Within this file are functions dedicated to data handling. The getDataLoader function is responsible for loading both training and testing data, while the getSampleImages function facilitates the visualization of select images from the training dataset.
+- `utils.py` : This file contains utility functions that can be used for training a model. It includes functions for model summary, displaying loss and accuracies, displaying data samples, and training/testing the model.
 
 - `S5.ipynb` :  Serving as the primary execution file, this Jupyter notebook begins by checking for CUDA availability and configuring the device accordingly. It proceeds to import utility functions, load data, and initialize the model along with its related functions. The model is then trained and evaluated using the provided data, with subsequent visualization of training and testing accuracy as well as loss plots.
 
@@ -44,5 +47,6 @@ The model achieves a training accuracy of approximately **99.16%** and a test ac
 
 ## Plotting Loss and Accuracy
 
-The getTrainingTestPlots function within model.py is employed to generate plots illustrating the training and test losses along with accuracies. These visualizations offer insights into the evolution of the model's performance throughout the training process. The loss plots demonstrate the reduction in the model's error over time, while the accuracy plots showcase enhancements in the model's performance.
-# ERA2-Session5
+The display_loss_and_accuracies function within utils.py is employed to generate plots illustrating the training and test losses along with accuracies. These visualizations offer insights into the evolution of the model's performance throughout the training process. The loss plots demonstrate the reduction in the model's error over time, while the accuracy plots showcase enhancements in the model's performance.
+
+Thank you
